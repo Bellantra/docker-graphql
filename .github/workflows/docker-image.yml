@@ -31,12 +31,14 @@ jobs:
       run: |
         echo "Iniciando build"
         docker build -t bellantra925/docker-graphql:0.0.2 .
+        docker build -t bellantra925/docker-graphql:latest .
         echo "Fin del build"
     
     - name: Push Docker image
       run: |
         echo "Iniciando push"
         docker push bellantra925/docker-graphql:0.0.2
+        docker push bellantra925/docker-graphql:latest
         echo "Fin del push" 
         
     # - name: Logout
